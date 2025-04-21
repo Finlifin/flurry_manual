@@ -221,24 +221,21 @@ assert(fields[1].get(.default, String)? == "empty"); -- 安全地获取默认值
 <ol>
 <li>
 <p><strong>依赖类型 (Dependent Types)</strong>: 函数（或其他接受参数的结构）的<strong>后续参数类型</strong>可以<strong>依赖于先前 <code>comptime</code> 参数的值</strong>。这允许创建高度灵活且类型安全的接口。<code>println</code> 函数是典型的例子，其可变参数 <code>varargs</code> 的具体类型由 <code>comptime</code> 参数 <code>format</code> 字符串的值在编译时确定。</p>
-<pre><code class="language-flurry"></code></pre>
-</li>
-</ol>
-<p>-- varargs的类型是一个元组，从fmt.Parse(format)求值而出
+<pre><code class="language-flurry">-- varargs的类型是一个元组，从fmt.Parse(format)求值而出
 fn println(comptime format: str, ...varargs: fmt.Parse(format)) {
-...
-inline for v in varargs {
-const T = v'type;
-inline when {
-T: str =&gt; stdio.write_all(v),
-T:- Display =&gt; stdio.write_all(c.to_string().as_str()),
-T: usize =&gt; stdio.write_all(fmt.format_int(v)),
-...
+    ...
+    inline for v in varargs {
+        const T = v'type;
+        inline when {
+            T: str =&gt; stdio.write_all(v),
+            T:- Display =&gt; stdio.write_all(c.to_string().as_str()),
+            T: usize =&gt; stdio.write_all(fmt.format_int(v)),
+            ...
+        }
+    }
 }
-}
-}
-```</p>
-<ol start="2">
+</code></pre>
+</li>
 <li>
 <p><strong>渐进类型 (Gradual Typing)</strong>: 编译时的容器类型，如 <code>object</code>（异构键值对）和 <code>List&lt;Any&gt;</code>（异构列表），允许存储<strong>不同类型的值</strong>。Flurry 提供了渐进类型的访问机制来处理这种异构性：</p>
 <ul>
