@@ -61,14 +61,14 @@
   - [编译时错误处理](advanced/comptime/errors.md) -->
 - [类型谓词 (type predicate)](advanced/type_predicates.md)
 - [代数效应 (Algebraic Effects)](advanced/effects.md)
-  - [概念与定义 (effect, yield)](advanced/effects/definition.md)
+  <!-- - [概念与定义 (effect, yield)](advanced/effects/definition.md)
   - [处理与恢复 (handles, resume)](advanced/effects/handling.md)
   - [预制 Handler](advanced/effects/prefabricated.md)
-  - [应用场景](advanced/effects/use_cases.md)
-- [错误处理机制 (!Errors T)](advanced/error_handling.md)
-  - [语法与传播 (!)](advanced/error_handling/syntax.md)
+  - [应用场景](advanced/effects/use_cases.md) -->
+- [错误处理机制](advanced/error_handling.md)
+  <!-- - [语法与传播 (!)](advanced/error_handling/syntax.md)
   - [处理 (! { ... })](advanced/error_handling/handling.md)
-  - [自动枚举融合](advanced/error_handling/fusion.md)
+  - [自动枚举融合](advanced/error_handling/fusion.md) -->
 - [模块系统与包管理](advanced/modules_packages.md)
   - [模块定义与组织 (mod, mod file)](advanced/modules_packages/modules.md)
   - [导入 (use)](advanced/modules_packages/use.md)
