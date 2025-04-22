@@ -65,6 +65,8 @@
   - [处理与恢复 (handles, resume)](advanced/effects/handling.md)
   - [预制 Handler](advanced/effects/prefabricated.md)
   - [应用场景](advanced/effects/use_cases.md) -->
+- [宏系统 (macros)](advanced/macros.md) <!-- Placeholder -->
+  <!-- - [ORM DSL 示例](advanced/macros/orm_dsl_example.md) -->
 - [错误处理机制](advanced/error_handling.md)
   <!-- - [语法与传播 (!)](advanced/error_handling/syntax.md)
   - [处理 (! { ... })](advanced/error_handling/handling.md)
@@ -77,8 +79,7 @@
   - [语法 (^expr, .symbol)](advanced/attributes/syntax.md)
   - [编译时配置与反射](advanced/attributes/comptime.md)
   - [库扩展应用](advanced/attributes/library_use.md)
-- [宏系统 (占位符)](advanced/macros.md) <!-- Placeholder -->
-  - [ORM DSL 示例](advanced/macros/orm_dsl_example.md)
+
 
 <!-- 第四部分： 形式化验证与安全 -->
 # 形式化验证与安全
